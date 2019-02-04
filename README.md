@@ -1,6 +1,6 @@
 # stm32f4-assembly
 
-Assembly template for a STM32F4 Discovery board
+Assembly template for an STM32F4 Discovery board
 
 ## Install
 * Toolchain - [GNU ARM Toolchain](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads)
@@ -13,7 +13,7 @@ Assembly template for a STM32F4 Discovery board
 Cleaning...
 Building template.s
    text    data     bss     dec     hex filename
-     56       0       0      56      38 template.elf
+     60       0       0      60      3c template.elf
 Successfully finished...
 ```
 
