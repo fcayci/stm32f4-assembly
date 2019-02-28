@@ -42,6 +42,12 @@ Flash written and verified! jolly good!
 
 Install the [ST LINK](https://www.st.com/en/development-tools/st-link-v2.html) drivers if you cannot see your board when `make burn` is run.
 
+## Disassemble
+
+Run `make disass` to disassamble.
+
 ## Debug
 
 In order to debug your code, connect your board to the PC, run `st-util` (comes with stlink utility) from one terminal, and from another terminal within the project directory run `make debug`. You can then use general **gdb** commands to browse through the code.
+
+Alternatively, you can install *Cortex-Debug* plug-in from marus25 on Visual Studio Code, and debug using the VSCode interface. No need for additional terminals. An example launch script is given with the code.
