@@ -70,7 +70,10 @@ size: $(TARGET).elf
 	@$(SIZE) $(TARGET).elf
 
 disass: $(TARGET).elf
-	@$(OBJDUMP) -xd $(TARGET).elf
+	@$(OBJDUMP) -d $(TARGET).elf
+
+disass-all: $(TARGET).elf
+	@$(OBJDUMP) -D $(TARGET).elf
 
 debug:
 	@$(DBG) --eval-command="target extended-remote :4242" \
@@ -88,4 +91,4 @@ clean:
 	@rm -f $(TARGET).lst
 	@rm -f $(TARGET).o
 
-.PHONY: all build size clean burn disass
+.PHONY: all build size clean burn disass disass-all
