@@ -79,6 +79,11 @@ debug:
 	@$(DBG) --eval-command="target extended-remote :4242" \
 	 $(TARGET).elf
 
+ocd:
+	@$(DBG) --eval-command="target extended-remote :3333" \
+	--eval-command="monitor tpiu config internal swo.log uart off 16000000 1600000" \
+	 $(TARGET).elf
+
 burn:
 	@st-flash write $(TARGET).bin 0x8000000
 
@@ -91,4 +96,4 @@ clean:
 	@rm -f $(TARGET).lst
 	@rm -f $(TARGET).o
 
-.PHONY: all build size clean burn disass disass-all
+.PHONY: all build size disass disass-all debug ocd burn clean
