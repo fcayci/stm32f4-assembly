@@ -5,3 +5,6 @@
 *.hex
 *.lst
 *.map
+.settings/
+Debug/
+.metadata
