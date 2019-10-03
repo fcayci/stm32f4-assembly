@@ -7,4 +7,6 @@
 *.map
 .settings/
 Debug/
+Release/
 .metadata
+*.launch
